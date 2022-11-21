@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/sliderViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/divider6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutIndicators"
+            android:layout_width="0dp"
+            android:layout_height="337dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/sliderViewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/sliderViewPager"/>
+
+        <ImageView
+            android:id="@+id/imgIcon1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            app:srcCompat="@drawable/home"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider6"/>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/divider6"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon1"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/txtAddress"/>
+
+        <ImageView
+            android:id="@+id/imgIcon2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            app:srcCompat="@drawable/clock"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintRight_toLeftOf="@id/dot"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon2"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="·"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textSize="30sp"
+            android:paddingTop="4dp"
+            app:layout_constraintLeft_toRightOf="@id/txtTime"
+            app:layout_constraintRight_toLeftOf="@id/txtDate"
+            app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/dot"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/txtTime"/>
+
+        <ImageView
+            android:id="@+id/imgIcon3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            app:srcCompat="@drawable/phonecall"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"/>
+
+        <TextView
+            android:id="@+id/txtCall"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"/>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/txtCall"/>
+
+        <ImageView
+            android:id="@+id/imgIcon4"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/shoppingcart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintBottom_toBottomOf="@id/txtCosts"/>
+
+        <TextView
+            android:id="@+id/txtCosts"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon4"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/txtCosts"/>
+
+        <ImageView
+            android:id="@+id/imgIcon5"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/chairoffice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:layout_constraintBottom_toBottomOf="@id/txtSeats"/>
+
+        <TextView
+            android:id="@+id/txtSeats"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon5"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/txtSeats"/>
+
+        <ImageView
+            android:id="@+id/imgIcon6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/computerset"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/txtSpec"/>
+
+        <TextView
+            android:id="@+id/txtSpec"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/imgIcon6"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

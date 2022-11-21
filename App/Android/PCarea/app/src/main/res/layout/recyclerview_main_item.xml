@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="190dp"
+    android:layout_height="260dp"
+    android:background="@drawable/mbtn_shape"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/txtPcAreaName"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="피시방 이름" />
+
+    <TextView
+        android:id="@+id/mainItem1"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="잔여시간:"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/txtPcAreaName"
+        app:layout_constraintTop_toBottomOf="@id/txtPcAreaName"
+        />
+
+    <TextView
+        android:id="@+id/txtPcAreaRhour"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="999"
+        android:gravity="right"
+        app:layout_constraintLeft_toRightOf="@id/mainItem1"
+        app:layout_constraintTop_toTopOf="@id/mainItem1"/>
+
+    <TextView
+        android:id="@+id/mainItem2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="시간"
+        app:layout_constraintRight_toLeftOf="@id/txtPcAreaRmin"
+        app:layout_constraintLeft_toRightOf="@id/txtPcAreaRhour"
+        app:layout_constraintTop_toTopOf="@id/mainItem1"/>
+
+    <TextView
+        android:id="@+id/txtPcAreaRmin"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:gravity="right"
+        android:text="99"
+        app:layout_constraintLeft_toRightOf="@id/mainItem2"
+        app:layout_constraintTop_toTopOf="@id/mainItem1"
+        app:layout_constraintRight_toLeftOf="@id/mainItem3"/>
+
+    <TextView
+        android:id="@+id/mainItem3"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="분"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="@id/txtPcAreaName"
+        app:layout_constraintTop_toTopOf="@id/mainItem1"/>
+
+    <TextView
+        android:id="@+id/mainItem4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="잔여좌석:"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="@id/mainItem1"
+        app:layout_constraintLeft_toLeftOf="@id/mainItem1"
+        app:layout_constraintTop_toBottomOf="@id/mainItem1"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/txtPcAreaRseat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="99"
+        android:gravity="right"
+        app:layout_constraintRight_toRightOf="@id/txtPcAreaRhour"
+        app:layout_constraintLeft_toLeftOf="@id/txtPcAreaRhour"
+        app:layout_constraintTop_toTopOf="@id/mainItem4"/>
+
+    <TextView
+        android:id="@+id/mainItem5"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="석"
+        app:layout_constraintLeft_toRightOf="@id/txtPcAreaRseat"
+        app:layout_constraintTop_toTopOf="@id/mainItem4"/>
+
+    <TextView
+        android:id="@+id/btnPcInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="바로가기"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="35dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
